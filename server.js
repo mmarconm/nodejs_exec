@@ -1,5 +1,6 @@
 const express = require("express");
 const dotEnv = require("dotenv");
+const cors = require("cors");
 
 dotEnv.config();
 
@@ -9,6 +10,9 @@ const app = express();
 //     console.log("Hey wassup");
 //     next();
 // };
+
+// Cors installed with npm install -s cors
+app.use(cors());
 
 // Request payload middleware for json
 app.use(express.json());
